@@ -1,0 +1,349 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title>整理单词</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="CSS/wordManagement.css">
+	</head>
+	<body>
+	<div class="backDrop">
+		<div class="list">
+			<div class="tabBar">
+				<h1 class="selected">待整理</h1>
+				<h1>已整理</h1>
+				<h1>背诵计划</h1>
+				<div class="search">
+					<input type="text" placeholder="输入一个单词">
+					<button>搜索</button>
+				</div>
+			</div><!-- tabBar -->
+			<!-- -------------------------------工具箱 ----------------------------------------------------------------->
+			<div class="toolBar">
+				<label><input type="checkbox" name="">全选</label>
+				<span class="rankType checkList">排序方式 <button><img src="images/icon/arrow_bottom_down.png"></button></span>
+				<span></span>
+				<span class="page">
+					<button><img src="images/icon/arrow_left .png"></button>
+					
+					<span class="checkList">1<button><img src="images/icon/arrow_bottom_down.png"></button></span>
+					<button><img src="images/icon/arrow_right.png"></button>
+				</span>
+				<class class="option">
+					<button>删除</button>
+				<button>加入背诵计划</button>
+				</class>
+				
+			</div>
+			<!-- ----------------------------------------------待整理---------------------------------------------------->
+			<table class="waitForLogging" style="display: none;">
+
+				<tr>
+					<th><button><img src="images/icon/add.png" class="icon"></button></th>
+					<th>单词</th>
+					<th>推荐原因</th>
+					<th>推荐指数</th>
+					<th>时间</th>
+				</tr><!-- 标题栏 -->
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>contract</td>
+					<td>常用3000</td>
+					<td><img src="images/icon/3star.png"></td>
+					<td>12-11</td>
+				</tr><!-- 一行数据 -->
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>image</td>
+					<td>输入3次</td>
+					<td><img src="images/icon/3star.png"></td>
+					<td>12-11</td>
+				</tr><!-- 一行数据 -->
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>dimission</td>
+					<td>常用5000</td>
+					<td><img src="images/icon/1star.png"></td>
+					<td>12-11</td>
+				</tr><!-- 一行数据 -->
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>image</td>
+					<td>输入3次</td>
+					<td><img src="images/icon/3star.png"></td>
+					<td>12-10</td>
+				</tr><!-- 一行数据 -->
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>half</td>
+					<td>常用3000</td>
+					<td><img src="images/icon/3star.png"></td>
+					<td>12-10</td>
+				</tr><!-- 一行数据 -->
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>image</td>
+					<td>输入3次</td>
+					<td><img src="images/icon/3star.png"></td>
+					<td>12-10</td>
+				</tr><!-- 一行数据 -->
+				<tr id="selected">
+					<td><input type="checkbox"></td>
+					<td>civilization</td>
+					<td></td>
+					<td></td>
+					<td>12-10</td>
+				</tr><!-- 一行数据 -->
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>political</td>
+					<td></td>
+					<td></td>
+					<td>12-10</td>
+				</tr><!-- 一行数据 -->
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>iconinc</td>
+					<td>输入3次</td>
+					<td><img src="images/icon/3star.png"></td>
+					<td>12-9</td>
+				</tr><!-- 一行数据 -->
+			
+			</table>
+			<!-- -----------------------------------已整理-------------------------------------------------------- -->
+			<table class="loggedData" style="display: none;">
+				<tr>
+					<th><button><img src="images/icon/add.png" class="icon"></button></th>
+					<th>单词</th>
+					<th>翻译</th>
+					<th>猜词</th>
+					<th>完/翻</th>
+					<th>听写</th>
+					<th>造句</th>
+					<th>时间</th>
+					<th>是否背诵</th>
+				</tr>
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>partnership</td>
+					<td>noun.合伙关系</td>
+					<td><img src="images/icon/check.png"></td>
+					<td></td>
+					<td><img src="images/icon/check.png"></td>
+					<td></td>
+					<td>12-11</td>
+					<td><img src="images/icon/check.png"></td>
+				</tr><!-- 一行数据 -->
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>proceed</td>
+					<td>v.继续</td>
+					<td></td>
+					<td><img src="images/icon/check.png"></td>
+					<td><img src="images/icon/check.png"></td>
+					<td></td>
+					<td>12-11</td>
+					<td></td>
+				</tr><!-- 一行数据 -->
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>antiparticle</td>
+					<td>n.反粒子</td>
+					<td><img src="images/icon/check.png"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>12-11</td>
+					<td></td>
+				</tr><!-- 一行数据 -->
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>enforcable</td>
+					<td>adj.可强制执行的</td>
+					<td></td>
+					<td><img src="images/icon/check.png"></td>
+					<td><img src="images/icon/check.png"></td>
+					<td></td>
+					<td>12-10</td>
+					<td></td>
+				</tr><!-- 一行数据 -->
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>invitation</td>
+					<td>n.发出邀请</td>
+					<td></td>
+					<td><img src="images/icon/check.png"></td>
+					<td></td>
+					<td><img src="images/icon/check.png"></td>
+					<td>12-10</td>
+					<td></td>
+				</tr><!-- 一行数据 -->
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>emtreprenure</td>
+					<td>n.企业家</td>
+					<td></td>
+					<td><img src="images/icon/check.png"></td>
+					<td></td>
+					<td><img src="images/icon/check.png"></td>
+					<td>12-9</td>
+					<td><img src="images/icon/check.png"></td>
+				</tr><!-- 一行数据 -->
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>partnership</td>
+					<td>noun.合伙关系</td>
+					<td><img src="images/icon/check.png"></td>
+					<td></td>
+					<td><img src="images/icon/check.png"></td>
+					<td></td>
+					<td>12-11</td>
+					<td><img src="images/icon/check.png"></td>
+				</tr><!-- 一行数据 -->
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>proceed</td>
+					<td>v.继续</td>
+					<td></td>
+					<td><img src="images/icon/check.png"></td>
+					<td><img src="images/icon/check.png"></td>
+					<td></td>
+					<td>12-11</td>
+					<td></td>
+				</tr><!-- 一行数据 -->
+			</table>
+		<!-- -----------------------背诵计划--------------------------- -->
+		<table class="plan">
+			<tr>
+				<th><button><img src="images/icon/add.png" class="icon"></button></th>
+					<th>单词</th>
+					<th>翻译</th>
+					<th>猜词</th>
+					<th>完/翻</th>
+					<th>听写</th>
+					<th>造句</th>
+					<th>背诵次数</th>
+					<th>错误次数</th>
+					<th>正确率</th>
+			</tr>
+			<tr>
+					<td><input type="checkbox"></td>
+					<td>partnership</td>
+					<td>noun.合伙关系</td>
+					<td><img src="images/icon/check.png"></td>
+					<td></td>
+					<td><img src="images/icon/check.png"></td>
+					<td></td>
+					<td>2次</td>
+					<td>3次</td>
+					<td>66%</td>
+			</tr><!-- 一行数据 -->
+			<tr>
+					<td><input type="checkbox"></td>
+					<td>proceed</td>
+					<td>v.继续</td>
+					<td><img src="images/icon/check.png"></td>
+					<td></td>
+					<td><img src="images/icon/check.png"></td>
+					<td></td>
+					<td>3次</td>
+					<td>4次</td>
+					<td>75%</td>
+			</tr><!-- 一行数据 -->
+			<tr>
+					<td><input type="checkbox"></td>
+					<td>enforcable</td>
+					<td>adj.可强制执行的</td>
+					<td></td>
+					<td><img src="images/icon/check.png"></td>
+					<td><img src="images/icon/check.png"></td>
+					<td></td>
+					<td>3次</td>
+					<td>4次</td>
+					<td>75%</td>
+				</tr><!-- 一行数据 -->
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>invitation</td>
+					<td>n.发出邀请</td>
+					<td></td>
+					<td><img src="images/icon/check.png"></td>
+					<td></td>
+					<td><img src="images/icon/check.png"></td>
+					<td>1次</td>
+					<td>4次</td>
+					<td>25%</td>
+				</tr><!-- 一行数据 -->
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>emtreprenure</td>
+					<td>n.企业家</td>
+					<td></td>
+					<td><img src="images/icon/check.png"></td>
+					<td></td>
+					<td><img src="images/icon/check.png"></td>
+					<td>3次</td>
+					<td>4次</td>
+					<td>75%</td>
+				</tr><!-- 一行数据 -->
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>partnership</td>
+					<td>noun.合伙关系</td>
+					<td><img src="images/icon/check.png"></td>
+					<td></td>
+					<td><img src="images/icon/check.png"></td>
+					<td></td>
+					<td>3次</td>
+					<td>4次</td>
+					<td>75%</td>
+				</tr><!-- 一行数据 -->
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>proceed</td>
+					<td>v.继续</td>
+					<td></td>
+					<td><img src="images/icon/check.png"></td>
+					<td><img src="images/icon/check.png"></td>
+					<td></td>
+					<td>2次</td>
+					<td>4次</td>
+					<td>50%</td>
+				</tr><!-- 一行数据 -->
+		</table>
+		</div><!-- list -->
+		<!-- --------------------------------左边栏-------------------------------------- -->
+		<div class="inputBox">
+			<form id="Editing">
+				<label for="Cword"></label>
+				<input id="Cword" value="civilization">
+				<div class="phoneticSymbol">
+					<input id="Esymbol" value="[ˌsɪvəlaɪˈzeɪʃn]">
+					<input  id="Asymbol" value="[ˌsɪvələˈzeɪʃn]">
+				</div><!-- phoneticSymbol -->
+				<div class="line">
+					<span id="Ctype">noun<button><img src="images/icon/arrow_bottom_down.png"></button></span>
+				<input id="Ctranslation" value="文明">
+				</div><!-- line -->
+				
+				<textarea rows="3" cols="34" style="resize:none" >The ancient civilizations of Central and Latin America were founded upon corn</textarea>
+				<textarea rows="3" cols="34" style="resize:none">古代中美洲和拉丁美洲的文明社会是建立在玉米之上的。</textarea>
+				<div class="level">
+					<label>猜词<input type="checkbox"></label>
+					<label>完型/翻译<input type="checkbox"></label>
+					<label>听写<input type="checkbox"></label>
+					<label>造句<input type="checkbox"></label>
+				</div>
+				<div class="addSample">
+					<button>
+						<img src="images/icon/add.png">添加一个例句</button>
+				</div><!-- addSample -->
+				<div class="addTranslation">
+					<button><img src="images/icon/add.png">增加多一个释义</button>
+				</div><!-- addTranslation -->
+				<button type="submit" class="submit">确定</button>
+			</form>
+		</div><!-- inputBox -->
+	</div><!-- backDrop -->
+
+	</body>
+	</html>

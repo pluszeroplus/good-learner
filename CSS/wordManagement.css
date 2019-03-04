@@ -1,0 +1,206 @@
+body {
+  font-family: "Microsoft Yahei";
+  color: #333;
+  letter-spacing: 0.05em; }
+
+button {
+  background: none;
+  border: none; }
+
+.backDrop {
+  position: relative;
+  max-width: 1280px;
+  min-height: 780px;
+  margin: 40px auto;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px #ccc;
+  background: #f7fbfc; }
+
+.list {
+  width: 69.9%;
+  display: inline-block; }
+
+.tabBar {
+  padding: 0px 20px 0 20px;
+  position: relative;
+  border-radius: 10px 0 0 0;
+  background: #6ab3cb;
+  color: #fff; }
+  .tabBar h1 {
+    display: inline-block;
+    margin: 20px 5px -3px 5px;
+    padding: 0 25px 15px 25px;
+    border-bottom: 2px;
+    font-size: 1em; }
+  .tabBar .selected {
+    border-bottom: solid #384a51; }
+  .tabBar .search {
+    position: absolute;
+    top: 15px;
+    right: 20px; }
+    .tabBar .search input {
+      margin-top: -5px;
+      border: none;
+      width: 250px;
+      padding: 5px 10px;
+      background: #f7fbfc;
+      color: #999; }
+      .tabBar .search input:hover, .tabBar .search input:focus {
+        color: #333;
+        background: #fff; }
+    .tabBar .search button {
+      background: #fff;
+      padding: 5px 10px; }
+      .tabBar .search button:hover {
+        color: #6ab3cb; }
+
+.checkList {
+  background: #fff;
+  padding: 10px;
+  color: #ccc;
+  font-size: 0.8em; }
+
+.toolBar {
+  position: absolute;
+  top: 80px;
+  right: 420px; }
+  .toolBar .page button {
+    padding: none;
+    width: 20px;
+    border-radius: 5px;
+    background: #fff; }
+  .toolBar .option button {
+    margin: 0 0px 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    background: #6ab3cb;
+    color: #fff; }
+
+table {
+  padding: 60px 20px 20px 20px;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  color: #333; }
+  table tr {
+    display: block;
+    margin: 15px 0;
+    padding: 10px 0;
+    border-radius: 5px;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px; }
+    table tr:first-child {
+      background: none;
+      padding: 0;
+      box-shadow: none; }
+  table th {
+    font-weight: normal;
+    font-size: 0.8em;
+    color: #ccc; }
+  table button {
+    background: #fff;
+    padding: 5px;
+    border-radius: 2px; }
+  table #selected {
+    background: #6ab3cb;
+    color: #fff; }
+  table img {
+    height: 1em; }
+
+.icon {
+  width: 16px; }
+
+.waitForLogging th:first-child, .loggedData th:first-child {
+  width: 50px; }
+.waitForLogging td:first-child, .loggedData td:first-child {
+  width: 50px;
+  box-sizing: border-box;
+  padding: 0 0 0 20px; }
+.waitForLogging td:nth-child(2), .loggedData td:nth-child(2) {
+  font-weight: bold; }
+
+.waitForLogging th:nth-child(2), .waitForLogging td:nth-child(2) {
+  width: 200px; }
+.waitForLogging th:nth-child(3), .waitForLogging td:nth-child(3) {
+  width: 200px; }
+.waitForLogging th:nth-child(4), .waitForLogging td:nth-child(4) {
+  width: 150px; }
+.waitForLogging th:nth-child(5), .waitForLogging td:nth-child(5) {
+  width: 100px; }
+
+.loggedData th:nth-child(2), .loggedData td:nth-child(2), .plan th:nth-child(2), .plan td:nth-child(2) {
+  width: 200px; }
+.loggedData th:nth-child(3), .loggedData td:nth-child(3), .plan th:nth-child(3), .plan td:nth-child(3) {
+  width: 200px; }
+.loggedData th:nth-child(4), .loggedData th:nth-child(5), .loggedData th:nth-child(6), .loggedData th:nth-child(7), .loggedData td:nth-child(4), .loggedData td:nth-child(5), .loggedData td:nth-child(6), .loggedData td:nth-child(7), .plan th:nth-child(4), .plan th:nth-child(5), .plan th:nth-child(6), .plan th:nth-child(7), .plan td:nth-child(4), .plan td:nth-child(5), .plan td:nth-child(6), .plan td:nth-child(7) {
+  width: 40px; }
+.loggedData th:nth-child(8), .loggedData td:nth-child(8), .plan th:nth-child(8), .plan td:nth-child(8) {
+  width: 100px; }
+
+.plan td:nth-child(8), .plan td:nth-child(9), .plan td:nth-child(10), .plan th:nth-child(8), .plan th:nth-child(9), .plan th:nth-child(10) {
+  width: 60px; }
+
+.inputBox {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 30%;
+  height: 780px;
+  border-radius: 0 10px 10px 0;
+  background: #fff; }
+  .inputBox input {
+    border: solid 1px  #ccc;
+    background: #f7fbfc; }
+  .inputBox #Cword, .inputBox #Ctranslation {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: none;
+    color: #6ab3cb;
+    font-size: 1.5em; }
+  .inputBox #Esymbol, .inputBox #Asymbol {
+    border: none;
+    width: 80px;
+    padding: 10px;
+    background: #fff;
+    color: #ccc; }
+  .inputBox .line {
+    margin-top: 30px;
+    position: relative;
+    padding: 0  0 0 100px; }
+    .inputBox .line #Ctype {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 100px; }
+  .inputBox .level {
+    padding: 20px 0 0 10px; }
+  .inputBox #Editing {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 40px 20px; }
+  .inputBox textarea {
+    margin: 20px 0 0 0;
+    padding: 10px;
+    border: none;
+    background: #f7fbfc;
+    font-family: "Microsoft Yahei";
+    color: #333;
+    line-height: 1.5em;
+    letter-spacing: 0.05em; }
+  .inputBox .addSample, .inputBox .addTranslation {
+    margin-bottom: 10px;
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc; }
+  .inputBox .addTranslation {
+    border: none; }
+  .inputBox .submit {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    background: #6ab3cb;
+    color: #fff; }
