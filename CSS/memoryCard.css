@@ -1,0 +1,178 @@
+body {
+  background-color: #f5f5f5; }
+
+body {
+  background: #f5f5f5; }
+
+.main {
+  margin: 0 auto;
+  width: 400px; }
+
+.home {
+  width: 100%;
+  margin: 20px 0; }
+  .home img {
+    display: block;
+    width: 100px;
+    margin: 0 auto; }
+
+.processBar {
+  margin-top: 20px;
+  width: 100%;
+  background: #ddd;
+  box-shadow: 5px 5px 40px #ddd;
+  height: 10px;
+  border-radius: 5px; }
+  .processBar .process {
+    width: 60%;
+    height: 10px;
+    background-color: #6ab3cb;
+    border-radius: 5px; }
+
+.toolBar {
+  margin: 60px 0 10px 20px; }
+  .toolBar button {
+    border: none;
+    background: none;
+    padding: 5px;
+    color: #ccc; }
+
+.card {
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+  box-sizing: border-box;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 1px 1px 10px #ccc; }
+  .card button {
+    position: absolute;
+    bottom: -60px;
+    border: none;
+    width: 190px;
+    height: 40px;
+    box-sizing: border-box;
+    font-size: 1.2em;
+    color: #fff;
+    background: #6ab3cb;
+    border-radius: 5px;
+    box-shadow: 5px 5px 40px #ddd; }
+  .card .submitButton {
+    display: none; }
+  .card .rightButton, .card .submitButton {
+    right: 0; }
+  .card .leftButton {
+    left: 0; }
+
+.contextFirst, .listening, .clozeTest, .translation, .makeSentence {
+  width: 100%;
+  min-height: 260px; }
+  .contextFirst .question, .listening .question, .clozeTest .question, .translation .question, .makeSentence .question {
+    min-height: 160px;
+    padding-bottom: 20px; }
+  .contextFirst p, .listening p, .clozeTest p, .translation p, .makeSentence p {
+    color: #999; }
+  .contextFirst em, .listening em, .clozeTest em, .translation em, .makeSentence em {
+    padding: 0 5px;
+    font-weight: bold;
+    color: #6ab3cb; }
+  .contextFirst i, .listening i, .clozeTest i, .translation i, .makeSentence i {
+    padding: 0px 10px;
+    color: #ccc;
+    font-size: 0.8em; }
+  .contextFirst .answer, .contextFirst input, .contextFirst textarea, .listening .answer, .listening input, .listening textarea, .clozeTest .answer, .clozeTest input, .clozeTest textarea, .translation .answer, .translation input, .translation textarea, .makeSentence .answer, .makeSentence input, .makeSentence textarea {
+    bottom: 0;
+    width: 100%;
+    min-height: 80px;
+    box-sizing: border-box;
+    padding: 20px;
+    background: #f5f5f5;
+    font-size: 1.5em;
+    border-radius: 5px; }
+  .contextFirst .answer, .listening .answer, .clozeTest .answer, .translation .answer, .makeSentence .answer {
+    background-image: url("../images/icon/answer.png");
+    background-size: 40px; }
+    .contextFirst .answer p, .listening .answer p, .clozeTest .answer p, .translation .answer p, .makeSentence .answer p {
+      padding: 0;
+      display: none; }
+  .contextFirst input, .contextFirst textarea, .listening input, .listening textarea, .clozeTest input, .clozeTest textarea, .translation input, .translation textarea, .makeSentence input, .makeSentence textarea {
+    border: 1px solid #f5f5f5; }
+    .contextFirst input:focus, .contextFirst textarea:focus, .listening input:focus, .listening textarea:focus, .clozeTest input:focus, .clozeTest textarea:focus, .translation input:focus, .translation textarea:focus, .makeSentence input:focus, .makeSentence textarea:focus {
+      background: none;
+      border: 1px dotted #ccc; }
+  .contextFirst del, .listening del, .clozeTest del, .translation del, .makeSentence del {
+    margin: 0 5px -4px 5px;
+    padding: 5px;
+    display: inline-block;
+    width: 4em;
+    height: 1em;
+    border-radius: 5px;
+    background: #f5f5f5; }
+  .contextFirst .tips, .listening .tips, .clozeTest .tips, .translation .tips, .makeSentence .tips {
+    width: 100%;
+    min-height: 80px;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 5px;
+    background-image: url("../images/icon/tips.png");
+    background-size: 30px; }
+    .contextFirst .tips p, .listening .tips p, .clozeTest .tips p, .translation .tips p, .makeSentence .tips p {
+      margin: 0;
+      display: none;
+      line-height: 150%;
+      font-size: 0.8em; }
+  .contextFirst .show, .listening .show, .clozeTest .show, .translation .show, .makeSentence .show {
+    background: #fff;
+    border: 1px dotted #ccc; }
+    .contextFirst .show p, .listening .show p, .clozeTest .show p, .translation .show p, .makeSentence .show p {
+      display: block; }
+
+.contextFirst p, .clozeTest p {
+  line-height: 180%;
+  padding: 20px 10px;
+  margin: 0;
+  font-size: 1em;
+  color: #999; }
+
+.listening img {
+  display: block;
+  width: 50px;
+  margin: 0 auto 20px auto; }
+
+.clozeTest ul {
+  margin: 0;
+  border: 1px dotted #ccc;
+  padding: 10px;
+  border-radius: 5px; }
+.clozeTest li {
+  font-size: 0.8em;
+  color: #999;
+  margin: 5px;
+  list-style: none;
+  display: inline-block; }
+
+.translation h1 {
+  margin: 0;
+  padding: 20px;
+  font-size: 1.5em;
+  font-weight: bolder; }
+
+.makeSentence h1 {
+  margin: 0;
+  padding: 20px;
+  font-size: 1.5em;
+  font-weight: bolder; }
+.makeSentence textarea {
+  resize: none;
+  border: none;
+  font-family: "Microsoft Yahei";
+  font-size: 1em;
+  color: #999; }
+
+.editBar {
+  margin: 0 auto;
+  left: 420px;
+  top: 150px;
+  width: 380px;
+  height: 650px;
+  box-shadow: 5px 5px 40px #ddd; }

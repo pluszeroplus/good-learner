@@ -1,6 +1,12 @@
-
+body{
+	background-color: #f5f5f5;
+}
 $mainColor:#6ab3cb;;
-$backgroundColor:#f7fbfc;
+$backgroundColor:#f5f5f5;
 $hoverColor:#e1ecf1;
 $darkenColor:#384a51;
 $yellowColor:#fff600;
+
+$shadow:5px 5px 40px #ddd;
+$borderThin: 1px solid #eee;
+$borderDotted: 1px dotted #ccc;

@@ -1,127 +1,204 @@
 @import "_theme.scss";
-body{
-	font-family: "Microsoft Yahei";
-	color: #333;
-	letter-spacing: 0.05em;
-}
+
 button{
 	background: none;
 	border: none;
 }
+
+
+
+.main{
+	position:relative;
+	max-width: 1280px;
+	
+	margin:0 auto;
+	
+}
 .backDrop{
 	position:relative;
 	max-width: 1280px;
-	min-height: 780px;
-	margin:40px auto;
-	
-	border-radius: 10px;
-	box-shadow: 1px 1px 10px #ccc;
-	background: $backgroundColor;
+	min-height: 650px;
+	background-color: #fff;
 }
-.list{
-	width: 69.9%;
+.left{
+
+	max-width: 900px;
 	display: inline-block;
 }
+.right{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 380px;
+	height: 100%;
+	border-left: $borderThin;
+}
+
+
+.inputBox{
+	.cancle{
+		display: none;
+	}
+}
+
+
+
 .tabBar{
-	padding:0px 20px 0 20px;
-	position: relative;
+	img{
 
-	border-radius: 10px 0 0 0;
-	background: $mainColor;
-	color: #fff;
-
+		float: left;
+		padding:20px;
+		width: 30px;
+	}
 	h1{
 		display: inline-block;
-		margin:20px 5px -3px 5px;
-		padding: 0 25px 15px 25px;
+		padding:10px 20px;
 		border-bottom: 2px;
-
+		
+		color:#ccc;
 		font-size: 1em;
 		
 	}
 	.selected{
-			border-bottom:solid $darkenColor;
+			color:$mainColor;
+			border-bottom:solid $mainColor;
 	}
-	.search{
-		position: absolute;
-		top:15px;
-		right: 20px;
-
-
-		input{
-			margin-top: -5px;
-			border: none;
-			width: 250px;
-			padding: 5px 10px;
-			background: $backgroundColor;
-			color:#999;
-			&:hover, &:focus{
-				color:#333;
-				background: #fff;
-			}
-		}
-		button{
-			background: #fff;
-			padding: 5px 10px;
-			&:hover{
-				color: $mainColor;
-			}
-		}
-	}
+	
 }//tidebar
-.checkList{
+
+
+select{
 		background: #fff;
-		padding:10px;
+		padding:5px;
+		border: none;
 
 		color:#ccc;
 		font-size: 0.8em;
 }
+
+
 .toolBar{
-	position: absolute;
-	top:80px;
-	right: 420px;
-	.page{
-		button{
-			padding: none;
-			width: 20px;
-			border-radius: 5px;
-			background: #fff;
+	margin:20px 0;
+	position: relative;
+	.searchBar{
+		display: inline-block;
+		position: relative;
+		width:440px;
+		input{
+			height: 40px;
+			padding:0 60px 0 20px;
+			width: 440px;
+			box-sizing: border-box;
+			border:none;
+			&:focus,&:hover,&:focus + button,&:hover +button,{
+				box-shadow: $shadow;
+			}
 
 		}
-	}
-	.option{
-		button{
-			margin:0 0px 10px 0;
-			padding: 10px;
-			border-radius: 5px;
-		
-			text-align: center;
+		.search{
+			padding:0;
+			position: absolute;
+			top:0;
+			right: 0;
+			bottom:0;
 			background: $mainColor;
+			width: 40px;
+			&:hover ~ input{
+				box-shadow: $shadow;
+			}
+		}
+	}
+	
+	img{
+		width: 20px;
+	}
+	.action{
+		position: absolute;
+		right: 0;
+		display: inline-block;
+		button
+		{
+			margin:0 0px 0px 10px;
+			height: 40px;
+			padding:0 20px;
+			text-align: center;
+			border:$borderThin;
+			background:#fff;
+			color:#ccc;
+		}
+		.highline{
+			background-color: $mainColor;
+			border:$mainColor;
 			color:#fff;
 		}
-		}
+	}
+	
+	
+
+
+		
 }
 table{ //public css
 
-	padding:60px 20px 20px 20px;
+	padding: 0 20px 0 20px;
 	box-sizing: border-box;
 	width: 100%;
 
 	text-align: left;
-	color: #333;
-	tr{
+	color: #ccc;
+	
+	
+	.tableCheckBox
+	{
+		display: none;
+
+		&:checked ~ div
+		{
+			background-color: $backgroundColor;
+			border:#fff;
+		}
+		&:checked + label{
+			background:url("../images/icon/checked.png");
+			background-size: 14px;
+			background-repeat: no-repeat;
+			border: none;
+		}
+	}
+	label{
+		display:block;
+		width: 14px;
+		height: 14px;
+		border:1px #cccc solid;
+	}
+	div{
 		display: block;
-		margin:15px 0;
-		padding:10px 0;
+		position:absolute;
+		top:0;
+		bottom:0;
+		left: 0;
+		right: 0;
+		z-index: -1;
 		border-radius: 5px;
+	}
+
+
+	tr{
+		position:relative;
+		display: block;
+		padding:15px 0;
 		width: 100%;
 
-		background: #fff;
 		border-bottom:1px;
+		border-radius: 5px;
 		&:first-child{
-			background: none;
-			padding: 0;
-			box-shadow:none;
+			&:hover{
+				background-color: #fff;
+			}
+			border-bottom: 1px solid #eee;
+		}
+		&:hover{
+			margin-right: -20px;
+			background: $backgroundColor;
 		}
 
 	}
@@ -138,14 +215,6 @@ table{ //public css
 
 		border-radius: 2px;
 	}
-
-	#selected{
-		//width:auto;
-		//margin-right: -30px;
-
-		background: $mainColor;
-		color:#fff;
-	}
 	img{
 		height: 1em;
 	}
@@ -156,150 +225,115 @@ table{ //public css
 	width: 16px;
 
 }
-.waitForLogging,.loggedData{//style for first child
-	th{
-		&:first-child{
-			width: 50px;
-		}
-	}
-	td{
-		&:first-child{
-
-			width:50px;
-			box-sizing: border-box;
-			padding:0 0 0 20px;
 
 
-		}
-		&:nth-child(2){
-			// color:$mainColor;
-			font-weight: bold;
-		}
-	}
-	}
-.waitForLogging//width
-	{
+
+
+
+
+
+
+
+.waitForLogging,.loggedData,.plan{//style for same childern
+	
 	th,td{
+		&:first-child{
+			padding:0 0 0 40px;
+			width: 30px;
+		}
+		&:last-child{
+			padding:0 40px 0 0;
+		}
 		&:nth-child(2){
-			width :200px;
+			color:$mainColor;
+			font-weight: bold;
+			overflow: hidden;
+			width: 200px;
 		}
 		&:nth-child(3){
-			width :200px;
-		}
-		&:nth-child(4){
-			width :150px;
-		}
-		&:nth-child(5){
-			width :100px;
+			overflow: hidden;
+			width: 200px;
+			
 		}
 		
-	}
-	
+		
+	 }
 }
-.loggedData,.plan{
-	th,td{
-		&:nth-child(2){
-			width :200px;
-		}
-		&:nth-child(3){
-			width :200px;
-		}
+.plan,.loggedData{
+	
+	td,th{
 		&:nth-child(4),&:nth-child(5),&:nth-child(6),&:nth-child(7){
-			width :40px;
+			width :50px;
+		}
+		&:nth-child(8),&:nth-child(9){
+			color:#ccc;
+			text-align: right;
+			width:80px;
+
+		}
+	}
+}
+.loggedData{
+	td{
+		&:last-child{
+			text-align: center;
 		}
 		&:nth-child(8){
+			width: 60px;
+		}
+	}
+}
+
+.waitForLogging{
+	td,th{
+		&:nth-child(3),&:nth-child(3){
+			width :300px;
+		}
+		&:nth-child(4){
 			width :100px;
 		}
-
-	}
-}
-.plan{
-	td,th{
-			&:nth-child(8),&:nth-child(9),&:nth-child(10){
-			width :60px;
-		}
-	}
-
-}
-.inputBox{
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	width: 30%;
-	height: 780px;
-
-	border-radius: 0 10px 10px 0;
-
-	background: #fff;
-	input{
-		border: solid 1px  #ccc;
-		background: $backgroundColor;
-	}
-	#Cword,#Ctranslation{
-		width: 100%;
-		box-sizing: border-box;
-		padding: 10px;
-		border: none;
-
-		color:$mainColor;
-		font-size: 1.5em;
-	}
-	#Esymbol,#Asymbol{
-		border: none;
-		width:80px;
-		padding: 10px;
-
-		background: #fff;
-		color:#ccc;
-
-	}
-	.line{
-		margin-top: 30px;
-		position: relative;
-		padding: 0  0 0 100px;
-		#Ctype{
-			position: absolute;
-			top:10px;
-			left:10px;
+		&:nth-child(5){
 			width: 100px;
+			text-align: right;
 		}
 	}
-	.level{
-		padding:20px 0 0 10px;
-	}
-	#Editing{
-		width: 100%;
-		box-sizing: border-box;
-		padding:40px 20px;
-	}
-	textarea{
-		margin:20px 0 0 0;
-		padding: 10px;
-		border: none;
 
-
-		background: $backgroundColor;
-		font-family: "Microsoft Yahei";
- 		color:#333;
- 		line-height: 1.5em;
- 		letter-spacing: 0.05em;
-	}
-	.addSample,.addTranslation{
-		margin-bottom:10px; 
-		padding:20px 0;
-		border-bottom: 1px solid #ccc;
-	}
-	.addTranslation{
-		border: none;
-	}
-	.submit{
-		width: 100%;
-		box-sizing: border-box;
-		padding:10px;
-		border-radius: 5px;
-
-		text-align: center; 
-		background: $mainColor;
-		color:#fff;
-	}
 }
+
+.pages{
+		position: relative;
+		width:200px;
+		margin:20px auto 0 auto;		
+		color:#ccc;
+		input{
+			height: 40px;
+			padding:0 60px 0 60px;
+			width: 200px;
+			box-sizing: border-box;
+			border:none;
+			text-align: center;
+	
+			&:focus,&:hover{
+				box-shadow: $shadow;
+				color:#333;
+			}
+
+		}
+		button{
+			padding:0;
+			position: absolute;
+			top:0;
+			bottom:0;
+			width: 40px;
+			&:first-child{
+				left: 0
+			}
+			&:last-child{
+				right: 0;
+			}
+			&:hover{
+				background-color: $mainColor;
+				color:#fff;
+			}
+		}
+	}

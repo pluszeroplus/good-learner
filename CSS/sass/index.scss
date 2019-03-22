@@ -1,0 +1,151 @@
+@import 'public.scss';
+.main{
+	margin:0 auto;
+	max-width: 900px;
+}
+
+.logo{
+	width: 100px;
+	margin:60px auto;
+
+	img{
+		width: 100%;
+	}
+	p{
+		width: 100%;
+		text-align: center;
+	}
+}
+
+.searchBar{
+		margin: 0 auto;
+		position: relative;
+		max-width: 900px;
+		input{
+			height: 40px;
+			padding:0 60px 0 20px;
+			width: 100%;
+			box-sizing: border-box;
+			border:none;
+			&:focus,&:hover,&:focus + button,&:hover +button,{
+				box-shadow: $shadow;
+			}
+
+		}
+		.search{
+			border:none;
+			padding:0;
+			position: absolute;
+			top:0;
+			right: 0;
+			bottom:0;
+			background: $mainColor;
+			width: 40px;
+			img{
+				width: 20px;
+			}
+			&:hover ~ input{
+				box-shadow: $shadow;
+			}
+		}
+
+}
+
+.process{
+	max-width: 900px;
+	margin:100px auto;
+	ul{
+		padding:0;
+		margin:20px 0 0 0;
+		width: 100%;
+		li{
+			width: 24.5%;
+			display: inline-block;
+
+			text-decoration: none;
+			img{
+				display: block;
+				width: 80px;
+				margin:0 auto;
+			}
+		}
+	}
+	.bar{
+		width: 100%;
+		height: 10px;
+	
+		border:1px solid #ccc;
+		border-radius: 5px;
+		.current{	
+			position:relative;
+			height: 10px;
+			width: 62.5%;
+			background-image:url("../images/icon/road.png");
+			background-size: 20px;
+			border-radius: 5px;
+			img{
+				position:absolute;
+				right:20px;
+				bottom:20px;
+				
+				height: 120px;
+			}
+		}
+
+	}
+
+}
+
+.action{
+	margin:40px 0;
+	.section1,.section2{
+		box-sizing: border-box;
+		padding:20px 0;
+	}
+	.section1{
+		display: inline-block;
+		width: 49.5%;
+		h1{
+			font-size: 60px;
+			color:$mainColor;
+		}
+		a,button{
+			border:none;
+			background-color: $mainColor;
+			color:#fff;
+		}
+	}
+	a,button{
+		margin:20px 0;
+		display: block;
+		width: 150px;
+		padding:10px;
+		
+		
+		text-decoration:none;
+		border-radius: 20px;
+		text-align: center;
+		font-size: 16px;
+	}
+	.section2{
+		display: inline-block;
+		width: 24.5%;
+		a,button{
+			margin:20px auto;
+			border:1px solid #ccc;
+			background-color: none;
+			color:#ccc;
+
+		}
+		img{
+			display: block;
+			margin:20px auto;
+			width: 120px;
+		}
+		&:hover{
+			background: #fff;
+
+			box-shadow: $shadow;
+		}
+	}
+}

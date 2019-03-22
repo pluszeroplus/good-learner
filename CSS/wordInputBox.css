@@ -1,0 +1,67 @@
+.inputBox {
+  border-radius: 0 10px 10px 0;
+  background: #fff; }
+  .inputBox input {
+    border: solid 1px  #ccc;
+    background: #f7fbfc; }
+  .inputBox #Cword, .inputBox #Ctranslation {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: none;
+    color: #6ab3cb;
+    font-size: 1.5em; }
+  .inputBox #Esymbol, .inputBox #Asymbol {
+    border: none;
+    width: 80px;
+    padding: 10px;
+    background: #fff;
+    color: #ccc; }
+  .inputBox .line {
+    margin-top: 30px;
+    position: relative;
+    padding: 0  0 0 100px; }
+    .inputBox .line #Ctype {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 100px; }
+  .inputBox .level {
+    padding: 20px 0 0 10px; }
+  .inputBox #Editing {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 40px 20px; }
+  .inputBox textarea {
+    margin: 20px 0 0 0;
+    padding: 10px;
+    border: none;
+    background: #f7fbfc;
+    font-family: "Microsoft Yahei";
+    color: #333;
+    line-height: 1.5em;
+    letter-spacing: 0.05em; }
+  .inputBox .addSample, .inputBox .addTranslation {
+    margin-bottom: 10px;
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc; }
+  .inputBox .addTranslation {
+    border: none; }
+  .inputBox .submit {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    background: #6ab3cb;
+    color: #fff; }
+
+.checkboxL .checkboxI {
+  appearance: none;
+  outline: none;
+  display: none; }
+  .checkboxL .checkboxI + span {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    border: 1px solid #ccc; }

@@ -1,0 +1,119 @@
+@import "_theme.scss";
+body{
+	font-family: "Microsoft Yahei";
+	color: #333;
+}
+.inputBox{
+	height: 100%;
+	position:relative;
+	box-sizing: border-box;
+	padding: 20px;
+	background: #fff;
+	h5{
+		margin:20px 0 10px 0px;
+		color:#ccc;
+		&:first-child{
+			margin-top: 0;
+		}
+	}
+
+	input, select,textarea,label{
+		box-sizing: border-box;
+		border:1px $backgroundColor;
+		padding: 10px 20px;
+		height: 40px;
+		border: none;
+		font-size: 1em;
+
+		background: $backgroundColor;
+		color:#333;
+		border-radius: 5px;
+		&:focus{
+			background-color: #fff;
+			border:1px solid #ccc;
+			color:#333;
+
+			box-shadow: inset -1px -1px 10px $backgroundColor;
+		}
+	}
+	#Cword,#Ctranslation{
+		width: 100%;
+	}
+
+	#Esymbol,#Asymbol{
+		width:157px;
+		box-sizing: border-box;
+	}
+	#Esymbol{
+		margin-right: 20px;
+	}
+
+
+	.line{
+		position: relative;
+		padding: 0  0 0 100px;
+		select{
+			position: absolute;
+			padding:10px;
+			top:0;
+			left:0;
+			width: 80px;
+
+		}
+	}
+	.level{
+		display: none;
+		&:checked + label{
+			color:#fff;
+			background: $mainColor;
+		}
+	}
+
+	label{
+		display: inline-block;
+		word-break: keep-all;
+		padding:5px 10px;
+		height: 30px;
+		font-size: 14px;
+		background: $backgroundColor;
+		border-radius: 15px;
+
+	}
+	textarea{
+		
+		height: auto;
+		background: $backgroundColor;
+		font-family: "Microsoft Yahei";
+ 		line-height: 1.5em;
+ 		&:hover, &:focus{
+ 			color:#333;
+ 		}
+	}
+
+	button{
+		border:1px solid #999;
+		background: #fff;
+		position:absolute;
+		bottom:20px;
+		
+
+		width: 157px;
+		height: 40px;
+		border-radius: 20px;
+
+		text-align: center; 
+		
+	}
+	.submit{
+		right:20px;
+		background: $mainColor;
+		color:#fff;
+	}
+	.cancle{
+		left: 20px;
+		color:#999;
+	}
+}
+
+
+

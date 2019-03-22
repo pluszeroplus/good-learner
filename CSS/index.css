@@ -1,0 +1,197 @@
+body {
+  background-color: #f5f5f5; }
+
+body {
+  font-family: "Microsoft Yahei";
+  color: #333; }
+
+.inputBox {
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+  padding: 20px;
+  background: #fff; }
+  .inputBox h5 {
+    margin: 20px 0 10px 0px;
+    color: #ccc; }
+    .inputBox h5:first-child {
+      margin-top: 0; }
+  .inputBox input, .inputBox select, .inputBox textarea, .inputBox label {
+    box-sizing: border-box;
+    border: 1px #f5f5f5;
+    padding: 10px 20px;
+    height: 40px;
+    border: none;
+    font-size: 1em;
+    background: #f5f5f5;
+    color: #333;
+    border-radius: 5px; }
+    .inputBox input:focus, .inputBox select:focus, .inputBox textarea:focus, .inputBox label:focus {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      color: #333;
+      box-shadow: inset -1px -1px 10px #f5f5f5; }
+  .inputBox #Cword, .inputBox #Ctranslation {
+    width: 100%; }
+  .inputBox #Esymbol, .inputBox #Asymbol {
+    width: 157px;
+    box-sizing: border-box; }
+  .inputBox #Esymbol {
+    margin-right: 20px; }
+  .inputBox .line {
+    position: relative;
+    padding: 0  0 0 100px; }
+    .inputBox .line select {
+      position: absolute;
+      padding: 10px;
+      top: 0;
+      left: 0;
+      width: 80px; }
+  .inputBox .level {
+    display: none; }
+    .inputBox .level:checked + label {
+      color: #fff;
+      background: #6ab3cb; }
+  .inputBox label {
+    display: inline-block;
+    word-break: keep-all;
+    padding: 5px 10px;
+    height: 30px;
+    font-size: 14px;
+    background: #f5f5f5;
+    border-radius: 15px; }
+  .inputBox textarea {
+    height: auto;
+    background: #f5f5f5;
+    font-family: "Microsoft Yahei";
+    line-height: 1.5em; }
+    .inputBox textarea:hover, .inputBox textarea:focus {
+      color: #333; }
+  .inputBox button {
+    border: 1px solid #999;
+    background: #fff;
+    position: absolute;
+    bottom: 20px;
+    width: 157px;
+    height: 40px;
+    border-radius: 20px;
+    text-align: center; }
+  .inputBox .submit {
+    right: 20px;
+    background: #6ab3cb;
+    color: #fff; }
+  .inputBox .cancle {
+    left: 20px;
+    color: #999; }
+
+.main {
+  margin: 0 auto;
+  max-width: 900px; }
+
+.logo {
+  width: 100px;
+  margin: 60px auto; }
+  .logo img {
+    width: 100%; }
+  .logo p {
+    width: 100%;
+    text-align: center; }
+
+.searchBar {
+  margin: 0 auto;
+  position: relative;
+  max-width: 900px; }
+  .searchBar input {
+    height: 40px;
+    padding: 0 60px 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+    border: none; }
+    .searchBar input:focus, .searchBar input:hover, .searchBar input:focus + button, .searchBar input:hover + button {
+      box-shadow: 5px 5px 40px #ddd; }
+  .searchBar .search {
+    border: none;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #6ab3cb;
+    width: 40px; }
+    .searchBar .search img {
+      width: 20px; }
+    .searchBar .search:hover ~ input {
+      box-shadow: 5px 5px 40px #ddd; }
+
+.process {
+  max-width: 900px;
+  margin: 100px auto; }
+  .process ul {
+    padding: 0;
+    margin: 20px 0 0 0;
+    width: 100%; }
+    .process ul li {
+      width: 24.5%;
+      display: inline-block;
+      text-decoration: none; }
+      .process ul li img {
+        display: block;
+        width: 80px;
+        margin: 0 auto; }
+  .process .bar {
+    width: 100%;
+    height: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px; }
+    .process .bar .current {
+      position: relative;
+      height: 10px;
+      width: 62.5%;
+      background-image: url("../images/icon/road.png");
+      background-size: 20px;
+      border-radius: 5px; }
+      .process .bar .current img {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        height: 120px; }
+
+.action {
+  margin: 40px 0; }
+  .action .section1, .action .section2 {
+    box-sizing: border-box;
+    padding: 20px 0; }
+  .action .section1 {
+    display: inline-block;
+    width: 49.5%; }
+    .action .section1 h1 {
+      font-size: 60px;
+      color: #6ab3cb; }
+    .action .section1 a, .action .section1 button {
+      border: none;
+      background-color: #6ab3cb;
+      color: #fff; }
+  .action a, .action button {
+    margin: 20px 0;
+    display: block;
+    width: 150px;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 16px; }
+  .action .section2 {
+    display: inline-block;
+    width: 24.5%; }
+    .action .section2 a, .action .section2 button {
+      margin: 20px auto;
+      border: 1px solid #ccc;
+      background-color: none;
+      color: #ccc; }
+    .action .section2 img {
+      display: block;
+      margin: 20px auto;
+      width: 120px; }
+    .action .section2:hover {
+      background: #fff;
+      box-shadow: 5px 5px 40px #ddd; }
