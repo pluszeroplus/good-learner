@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>录入单词</title>
+	<link rel="stylesheet" type="text/css" href="CSS/public.css">
+	<link rel="stylesheet" type="text/css" href="CSS/input.css">
+	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="javascript/public.js"></script>
+	<script type="text/javascript" src="javascript/insert.js"></script>
+</head>
+</head>
+<body>
+	<div class="main">
+		<header>
+			<a href="index.html"><img src="images/goodlearner.png"></a>
+			<h5 id="username"></h5>
+			
+			<a href="wordMangementWFL.html">整理单词</a>
+			<a href="input.html" class="selected">录入单词</a>
+			<a href="">使用帮助</a>
+		</header>
+		<div class="messageBox" id="messageBox">
+			<div class="message" >
+				<img id="messageBoxImg" src="images/icon/maidHi.png" alt="">
+				<div>
+					<p id="messageBoxP">欢迎</p>
+
+					<button id="messageBoxCancel" onclick="cancel()">撤销</button>
+					<button id="messageBoxSubmit" onclick="insertWord(1)">确定</button>
+				</div>
+			</div><!-- message -->
+		</div><!-- messageBox -->
+				
+			<div class="searchBar">
+				<button onclick="insertWord()" id="submit" class="search"><img src="images/icon/search.png" alt=""></button>
+				<input id="word"type="text" name="" placeholder="输入一个单词或词组" oninput ="showTips()" onfocus="showUL()" onblur="hideUL()">
+				<ul id=option>
+					
+				</ul>
+			</div>
+				
+	
+</body>
+</html>

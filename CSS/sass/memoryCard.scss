@@ -3,7 +3,7 @@ body{
 	background: $backgroundColor;
 }
 
-.main{
+.mainMC{
 	margin:0 auto;
 	width: 400px;
 }
@@ -17,6 +17,7 @@ body{
 	}
 }
 .processBar{
+	position:relative;
 	margin-top: 20px;
 	width: 100%;
 	background: #ddd;
@@ -66,10 +67,7 @@ body{
 		border-radius: 5px;
 		box-shadow: $shadow;
 	}
-	.submitButton
-	{
-		display: none;
-	}
+	
 	.rightButton,.submitButton
 	{
 		right:0;
@@ -81,7 +79,8 @@ body{
 	
 }
 
-.contextFirst,.listening,.clozeTest,.translation,.makeSentence{
+.contextFirst,.listening,.clozeTest,.translation,.makeSentence,.congratulation{
+
 	width: 100%;
 	min-height: 260px;
 	.question{
@@ -89,6 +88,7 @@ body{
 		padding-bottom:20px;
 	}
 	p{	
+		
 		color:#999;
 	}
 	em{
@@ -122,6 +122,7 @@ body{
 		background-size: 40px;
 		p{
 			padding:0;
+			margin:0;
 			display: none;
 		}
 	}		
@@ -131,6 +132,7 @@ body{
 		&:focus{
 			background: none;
 			border: $borderDotted;
+			transition: all 0.5s;
 		}
 		
 
@@ -184,15 +186,30 @@ body{
 		color:#999;
 	}	
 }
+.congratulation{
+	img{
+		display: block;
+		width:100px;
+		margin:0 auto 20px auto;
 
+	}
+	h1{
+		margin:0;
+		padding: 20px;
+		font-size: 1.5em;
+		font-weight: bolder;
+		text-align: center;
+	}
+}
 
-.listening{
+.listening,{
 	img{
 		display: block;
 		width:50px;
 		margin:0 auto 20px auto;
 
 	}
+
 }
 
 .clozeTest{
@@ -210,9 +227,12 @@ body{
 		list-style: none;
 		display: inline-block;
 	}
+	p{
+		margin-top: 10px;
+	}
 }
 
-.translation{
+.translation,{
 	h1{
 		margin:0;
 		padding: 20px;

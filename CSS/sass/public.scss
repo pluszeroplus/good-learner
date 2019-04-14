@@ -9,6 +9,8 @@ body{
 	box-sizing: border-box;
 	padding: 20px;
 	background: #fff;
+
+	overflow-y: auto;
 	h5{
 		margin:20px 0 10px 0px;
 		color:#ccc;
@@ -19,10 +21,9 @@ body{
 
 	input, select,textarea,label{
 		box-sizing: border-box;
-		border:1px $backgroundColor;
 		padding: 10px 20px;
 		height: 40px;
-		border: none;
+		border: 1px solid $backgroundColor;
 		font-size: 1em;
 
 		background: $backgroundColor;
@@ -34,13 +35,23 @@ body{
 			color:#333;
 
 			box-shadow: inset -1px -1px 10px $backgroundColor;
+			transition: all 0.5s;
+		}
+	}
+	textarea{
+		margin-top: 10px;
+		&:first-child{
+			margin-top: 0;
 		}
 	}
 	#Cword,#Ctranslation{
 		width: 100%;
 	}
-
+	#CwordId,#phoneticSymbolID{
+		display: none;
+	}
 	#Esymbol,#Asymbol{
+		margin-top: 10px;
 		width:157px;
 		box-sizing: border-box;
 	}
@@ -52,13 +63,34 @@ body{
 	.line{
 		position: relative;
 		padding: 0  0 0 100px;
-		select{
+		.select{
 			position: absolute;
 			padding:10px;
 			top:0;
 			left:0;
 			width: 80px;
 
+		}
+		ul{
+			display: none;
+			position: absolute;
+			top:40px;
+			left: 0;
+			margin:0;
+			background: #fff;
+			width: 80px;
+			padding: 0;
+			box-shadow: $shadow;
+			li{
+				list-style-type: none;
+				padding:10px;
+
+				&:hover{
+					background: $backgroundColor;
+	
+					transition: all 0.2s;
+				}
+			}
 		}
 	}
 	.level{
@@ -87,14 +119,13 @@ body{
  		line-height: 1.5em;
  		&:hover, &:focus{
  			color:#333;
+ 			transition: all 0.5s;
  		}
 	}
 
 	button{
 		border:1px solid #999;
 		background: #fff;
-		position:absolute;
-		bottom:20px;
 		
 
 		width: 157px;
@@ -105,15 +136,217 @@ body{
 		
 	}
 	.submit{
-		right:20px;
+		border:none;
 		background: $mainColor;
 		color:#fff;
 	}
 	.cancle{
-		left: 20px;
 		color:#999;
 	}
 }
 
 
+header{
+	img{
+		height: 50px;
+		
+	}
 
+	a,button,h5{
+		margin:0;
+		display: inline-block;
+		padding: 20px 20px 10px 20px;
+		border-bottom: 2px;
+		color: #ccc;
+		font-size:16px;
+	
+	}
+	a{
+		
+		text-decoration: none;
+		&:first-child{
+			padding: 0;
+			float: left;
+			border:none;
+		}
+	}
+	h5{
+		color: $mainColor;
+		text-decoration: underline;
+	}
+	.selected{
+			color:$mainColor;
+			border-bottom:solid $mainColor;
+	}
+}
+
+
+.main{
+	max-width: 1600px;
+	height: 720px;
+	box-sizing: border-box;
+	padding:0 160px;
+	margin:40px auto  0 auto;
+
+	position:relative;
+	background-position: center -120px;
+	background-repeat: no-repeat;
+	background-image: url("../images/background.png");
+	background-size: 1600px;
+	.woman1,.woman2,.man1,.man2{
+		position:absolute;
+	}
+	.woman1{
+		top:630px;
+		left: 20px;
+	}
+	.woman2{
+		top:380px;
+		left:730px;
+	}
+	.man1{
+		top:200px;
+		left:1300px;
+	}
+	.man2{
+		top:630px;
+		left: 730px;
+	}
+}
+.rail{
+		margin-top: -300px;
+		position: relative;
+		width: 99.9%;
+		height: 400px;
+		background-image: url("../images/rail.png");
+		background-repeat: repeat-x;
+		overflow: hidden;
+		.train{
+			position: absolute;
+			z-index: 1;
+			width: 500px;
+			height: 400px;
+			left: 25%;
+			bottom:0;
+			// animation:move 56s;
+			animation:move 40s infinite;
+			background-image: url("../images/train.gif");
+
+		}
+}
+@keyframes move{
+	0%{
+		left: -300px;
+	}
+	100%{
+		left:100%;
+	}
+}
+
+
+.message{
+	width: 100%;
+	min-height: 120px;
+	box-sizing: border-box;
+	padding: 50px 20px 20px 100px;
+	position: relative;
+	img{
+		position: absolute;
+		top:20px;
+		left:20px;
+		width: 80px;
+	}
+	div{
+		width: 300px;
+		padding: 10px;
+		border-radius: 5px;
+		border:2px solid #cccccc;
+		display: inline-block;
+		color:#333;
+
+	}
+	button{
+		display: none;
+		float: right;
+		background: none;
+		border: none;
+
+		font-size:1em;
+		color:$mainColor;
+	}
+	p{
+		margin:0;
+	}
+}	
+
+.messageBox{
+	display: none;
+	z-index: 9;
+
+	position: fixed;
+	width: 450px;
+	margin-left: -225px;
+	
+	left:50%;
+	top:20px;	
+
+	background: $backgroundColor;
+	border-radius: 10px;
+	box-shadow: $shadow;
+}
+
+.confirmBox{
+	display: none;
+	z-index: 10;
+	position: fixed;
+	width: 380px;
+	height: 300px;
+
+	top:200px;
+	left: 50%;
+	margin-left: -225px;
+	box-sizing: border-box;
+	padding: 20px;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: $shadow;
+	img{
+		margin:0px auto;
+		display: block;
+		width: 100px;
+	}
+	p{
+		margin:20px 0 20px 0;
+		text-align: center;
+		min-height: 80px;
+		font-size: 1.5em;
+		color:#333;
+	}
+	button{
+		border:none;
+
+		width: 157px;
+		height: 40px;
+		border-radius: 20px;
+
+		text-align: center; 
+		background: $backgroundColor;
+		&:last-child{
+			margin-left: 20px;
+
+			background: $mainColor;
+			color:#fff;
+		}
+	}
+}
+.background{
+	display: none;
+	z-index: 2;
+	position: fixed;
+	opacity:0.1;
+	background: #000;
+	top:0;
+	bottom: 0;
+	right:0;
+	left: 0;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>登录</title>
+	<link rel="stylesheet" type="text/css" href="CSS/public.css">
+	<link rel="stylesheet" type="text/css" href="CSS/logIn.css">
+	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="javascript/public.js"></script>
+<script type="text/javascript" src="javascript/login.js"></script>
+</head>
+<body>
+	<!-- 来自index -->
+	<div class="messageBox" id="messageBox">
+			<div class="message" >
+				<img id="messageBoxImg" src="images/icon/maidHi.png" alt="">
+				<div>
+					<p id="messageBoxP">欢迎</p>
+					<button id="messageBoxCancel">撤销</button>
+					<button id="messageBoxSubmit">确定</button>
+				</div>
+			</div><!-- message -->
+	</div>
+	<!----------------------- messageBox ------------------------------------------------>
+	
+		<div class="confirmBox">
+		
+			<div class="confirm">
+				<img src="images/icon/maidWarning.png">
+				<p>你确定要离开？</p>
+				<button>取消</button>
+				<button>确定</button>
+			</div>
+		</div>
+	
+	<!-- ----------------------------------confirmBox ----------------------------->
+		<div class="main">
+				<header>
+					<a href="logIn.html"><img src="images/goodlearner.png"></a>
+					<a href="">使用帮助</a>
+				</header>	
+				<div class="form">	
+					<h5>用户名</h5>
+					<input type="text" id="username">
+					<h5>密码</h5>
+					<input type="password" id="password">
+					<button onclick="login()">登录</button>
+				</div>
+				<img src="images/woman.gif" class="woman1">
+		<img src="images/woman2.gif" class="woman2">
+		<img src="images/man.gif" class="man1">
+		<img src="images/man2.gif" class="man2">
+		</div>	<!-- main -->
+		<div class="rail"><div class="train"></div></div>
+</body>
+
+</html>

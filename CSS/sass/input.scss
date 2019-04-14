@@ -1,0 +1,83 @@
+@import '_theme.scss';
+.main{
+
+	background-image: url("../images/inputBackground.png");
+	height: 850px;
+}
+.messageBox{
+	display: block;
+	position: static;
+	margin:50px auto 20px auto;
+
+	box-shadow: none;
+	.message{
+		p{
+			margin:0;
+			padding: 0;
+		}
+	}
+}
+.searchBar{
+	max-width: 900px;
+	height:40px;
+	margin:0px auto ;
+	position: relative;
+	ul{	
+		display: none;
+		position: absolute;
+		top:0;
+		left: 0;
+		right: 40px;
+		z-index: 2;
+		margin:0;
+		margin-top: 40px;
+		padding:10px 00px;
+		background: #fff;
+		opacity:0.5;
+
+	}
+	li{
+		margin:5px 0;
+		padding:5px 30px;
+		list-style-type: none;
+		&:hover{
+			background: $mainColor;
+			color:#fff;transition: all 0.5s;
+		}
+	}
+	#selected{
+		background: $mainColor;
+		color:#fff;
+	}
+	input{
+		height: 40px;
+		padding:0 60px 0 20px;
+		width: 100%;
+		box-sizing: border-box;
+		border:none;
+		&:hover,&:hover +button,{
+			box-shadow: $shadow;
+			transition: all 0.5s;
+		}
+
+		}
+	.search{
+		border:none;
+		padding:0;
+		position: absolute;
+		top:0;
+		right: 0;
+		bottom:0;
+		background: $mainColor;
+		width: 40px;
+		img{
+			width: 20px;
+		}
+		&:hover ~ input{
+			box-shadow: $shadow;
+			transition: all 0.5s;
+		}
+	}
+
+
+}

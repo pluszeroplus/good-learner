@@ -5,11 +5,19 @@
 	<title>单词背诵</title>
 	<link rel="stylesheet" type="text/css" href="CSS/public.css">
 	<link rel="stylesheet" type="text/css" href="CSS/memoryCard.css">
+	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="javascript/public.js"></script>
+	<script type="text/javascript" src="javascript/memoryCard.js"></script>
 </head>
 <body>
-	<div class="main">
+	<div id="messageBoxAndConfirmBox">	
+	</div>
+	<script type="text/javascript">
+		$('#messageBoxAndConfirmBox').load("_messageBoxAndConfirmBox.txt");
+	</script>
+	<div class="mainMC">
 		<div class="home">
-			<img src="images/icon/home.png" alt="">
+			<img src="images/icon/home.png" alt="" onclick="leave()">
 		</div>
 		<div class="processBar">
 			<div class="process"></div>
@@ -64,140 +72,7 @@
 		</div><!-- inputBox -->
 			<!-- ---------------------来自wordManagement，不能修改 ---------------------->
 		</div>
-		<div class="card">
-			<div class="contextFirst" >
-				<div class="question">	
-					<p>
-						<em>contract</em> is a valid <em>contract</em> and propety transferred under it cannot be recoverred even from the other party to the <em>contract</em>.
-					
-					</p>
-					<i>英 [ˈkɒntrækt] 美 [ˈkɑ:ntrækt] </i>
-				</div>
-				<div class="answer"><p>
-					n. 合同
-				</p></div>
-			</div><!-- contextFirst -->
-
-				<button class="leftButton">
-					不记得
-				</button>
-				<button class="rightButton">
-					记得
-				</button>
-				<button class="submitButton">
-					确定
-				</button>
-		</div>
-		<div class="card" style="display:none" >
-			<div class="contextFirst" >
-				<div class="question">
-					<p>
-						This is a <em>long</em> sentence test.This is a <em>long</em> sentence test.This is a <em>long</em> sentence test.This is a <em>long</em> sentence test.This is a <em>long</em> sentence test.This is a <em>long</em> sentence test.This is a <em>long</em> sentence test.
-					</p>
-				</div>
-				
-				
-				<div class="answer show"><p>
-					n. 最长最长不能超过12个字
-				</p></div>
-			</div><!-- contextFirst -->
-		</div><!-- long sentence and show test -->
-		<div class="card" style="display:none">
-			<div class="contextFirst" >
-				<div class="question">
-					<p>
-						This is a <em>long</em> sentence test.This is a <em>long</em> sentence test.This is a <em>long</em> sentence test.This is a <em>long</em> sentence test.This is a <em>long</em> sentence test.This is a <em>long</em> sentence test.This is a <em>long</em> sentence test.
-					</p>
-				</div>
-				
-				
-				<div class="answer show"><p>
-					n. 超长的字测试。超长的字测试。超长的字测试。超长的字测试。超长的字测试。
-				</p></div>
-			</div><!-- contextFirst -->
-		</div><!-- long answer test and show test -->
-
-		<div class="card" style="display:none">
-			<div class="listening" >
-				<div class="question">
-					<img src="images/icon/sound.png">
-					<div class="tips">
-						<p>
-							<del></del> is a valid <del></del> and 		propety transferred under it cannot be recoverred even from the other party to the <del></del>
-						</p> 
-					</div>
-				</div>
-				<input type="" name="" autofocus="autofocus" placeholder="type here!">
-			</div><!-- listening -->
-		</div>
-
-		<div class="card" style="display:none">
-			<div class="listening" >
-				<div class="question">
-					<img src="images/icon/sound.png">
-					<div class="tips show">
-						<p>
-							<del></del> is a valid <del></del> and 		propety transferred under it cannot be recoverred even from the other party to the <del></del>
-						</p> 
-					</div>
-				</div>
-				<input type="" name="" autofocus="autofocus" placeholder="type here!">
-			</div><!-- listening -->
-		</div><!-- tips show test  -->
-
-		<div class="card" style="display:none">
-			<div class="clozeTest">
-				<div class="question">
-					<ul>
-					<li>partnership</li>
-					<li>contract</li>
-					<li>proceed</li>
-					<li>invitation</li>
-					<li>antiparticle</li>
-					<li>antipathy</li>
-					<li>consideration</li>
-					<li>entreprenure</li>
-					<li>enforceable</li>
-					<li>partnership</li>
-				</ul>
-				<p>
-					<del></del>is a valid <del></del> and propety transferred under it cannot be recoverred even from the other party to the <del></del>
-				</p>
-				</div>
-				<input type="" name="" autofocus="autofocus" placeholder="type here!">	
-			</div><!-- clozeTest -->
-		</div>
-
-		<div class="card" style="display:none">
-			<div class="translation">
-				<div class="question">
-					<h1>
-						n. 合同
-					</h1>
-					<div class="tips">
-					<p>
-						to enter into a <del></del> with sb for sth.
-					</p>
-					</div>
-				</div>
-				
-				<div class="answer">
-					<p>
-						contract
-					</p>		
-				</div>
-				
-			</div><!-- translation -->
-		</div>
-
-		<div class="card" style="display:none">
-			<div class="makeSentence" >
-				<h1>请用<em>contract</em>造句</h1>
-				<textarea autofocus="autofocus" cols="38" rows="6">This is a sample. One party set aside the contract made by coercion, undue influence, misrepresentation or fral.
-				</textarea>
-			</div><!-- makeSentence -->
-
-
+		<div class="card" id="card" >
 		</div><!-- card -->
 	
 	</div><!-- main -->

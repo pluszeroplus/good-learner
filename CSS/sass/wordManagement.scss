@@ -7,7 +7,7 @@ button{
 
 
 
-.main{
+.mainWM{
 	position:relative;
 	max-width: 1280px;
 	
@@ -43,28 +43,7 @@ button{
 
 
 
-.tabBar{
-	img{
 
-		float: left;
-		padding:20px;
-		width: 30px;
-	}
-	h1{
-		display: inline-block;
-		padding:10px 20px;
-		border-bottom: 2px;
-		
-		color:#ccc;
-		font-size: 1em;
-		
-	}
-	.selected{
-			color:$mainColor;
-			border-bottom:solid $mainColor;
-	}
-	
-}//tidebar
 
 
 select{
@@ -92,6 +71,7 @@ select{
 			border:none;
 			&:focus,&:hover,&:focus + button,&:hover +button,{
 				box-shadow: $shadow;
+				transition: all 0.5s;
 			}
 
 		}
@@ -105,6 +85,7 @@ select{
 			width: 40px;
 			&:hover ~ input{
 				box-shadow: $shadow;
+				transition: all 0.5s;
 			}
 		}
 	}
@@ -125,6 +106,10 @@ select{
 			border:$borderThin;
 			background:#fff;
 			color:#ccc;
+			&:hover{
+				box-shadow: $shadow;
+				transition: all 0.5s;
+			}
 		}
 		.highline{
 			background-color: $mainColor;
@@ -147,7 +132,13 @@ table{ //public css
 	text-align: left;
 	color: #ccc;
 	
-	
+	.rank{
+		padding:0;
+		background:none;
+		img{
+			height: 10px;
+		}
+	}
 	.tableCheckBox
 	{
 		display: none;
@@ -193,12 +184,14 @@ table{ //public css
 		&:first-child{
 			&:hover{
 				background-color: #fff;
+				transition: all 0.5s;
 			}
 			border-bottom: 1px solid #eee;
 		}
 		&:hover{
 			margin-right: -20px;
 			background: $backgroundColor;
+			transition: all 0.5s;
 		}
 
 	}
@@ -217,6 +210,12 @@ table{ //public css
 	}
 	img{
 		height: 1em;
+	}
+	.exampleSentence,.property{
+		display: none;
+	}
+	td{
+		display: inline-block;
 	}
 
 }
@@ -248,11 +247,12 @@ table{ //public css
 			color:$mainColor;
 			font-weight: bold;
 			overflow: hidden;
-			width: 200px;
+			box-sizing: border-box;
+			width: 180px;
 		}
 		&:nth-child(3){
 			overflow: hidden;
-			width: 200px;
+			width: 180px;
 			
 		}
 		
@@ -268,18 +268,26 @@ table{ //public css
 		&:nth-child(8),&:nth-child(9){
 			color:#ccc;
 			text-align: right;
+			width:100px;
+			}
+		&:nth-child(9){
+			
 			width:80px;
 
 		}
 	}
 }
-.loggedData{
+
+.loggedData,.plan{
 	td{
 		&:last-child{
 			text-align: center;
 		}
-		&:nth-child(8){
-			width: 60px;
+
+		&:nth-child(10){
+			padding: 0 0px 0 50px;
+			width: 20px;
+			height: 20px;
 		}
 	}
 }

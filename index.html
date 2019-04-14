@@ -5,45 +5,65 @@
 	<title>good learner</title>
 	<link rel="stylesheet" type="text/css" href="CSS/public.css">
 	<link rel="stylesheet" type="text/css" href="CSS/index.css">
+	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="javascript/public.js"></script>
+	<script type="text/javascript" src="javascript/index.js"></script>
 </head>
 <body>
-	<div class="main">
-		<div class="logo">
-			<img src="images/icon/logo.png">
-			<p>十O十</p>
-		</div>
-
-		<div class="searchBar">
-			<button class="search"><img src="images/icon/search.png" alt=""></button>
-			<input type="text" name="" placeholder="输入一个单词或词组">
-		</div><!-- searchBar -->
-			<div class="action">
-			<div class="section1">
-				<h1>本周已完成3/4</h1>
-				<a href="memoryCard.html">开始背诵</a>
-			</div>
-			<div class="section2">
-				<img src="images/icon/plan.png">
-				<a href="wordMangement.html">整理单词</a>
-			</div>
-			<div class="section2">
-				<img src="images/icon/set.png">
-				<button>修改背诵计划</button>
-			</div>
-		</div><!-- action -->
-		<div class="process" >
-			<ul>
-				<li><img src="images/icon/class1.png"></li>
-				<li><img src="images/icon/class2.png"></li>
-				<li><img src="images/icon/class3.png"></li>
-				<li><img src="images/icon/class0.png"></li>
-			</ul>
-			<div class="bar">
-				<div class="current">
-					<img src="images/icon/flag.png">
-				</div>
-			</div>
-		</div><!-- process -->
+	<div id="messageBoxAndConfirmBox">	
 	</div>
+	<script type="text/javascript">
+		$('#messageBoxAndConfirmBox').load("_messageBoxAndConfirmBox.txt");
+	</script>
+	
+		<div class="setPlan" id="setPlan">
+			<span>
+				<h5>每次背诵单词数</h5>
+				<div class="pages">
+					<button onclick="changePages(this,-1,changePlan)">-</button>
+					<input id="setPlanTimes" type="text" name="" value="15" onchange="changePages(this,0,changePlan)">
+					<button onclick="changePages(this,1,changePlan)">+</button>
+				</div>
+			</span>
+			<h5 id="currentWord"></h5>
+			<h5 id="currentPlan"></h5>
+			
+			<button onclick="updatePlan()">确定</button>
+			<button onclick="hideSetPlan()">取消</button>
+		</div><!-- setPlan -->
+	<div class="background" id="background"></div><!-- background -->
+	
+	<div class="main">
+		<header>
+			<a href="index.html"><img src="images/goodlearner.png"></a>
+			<h5 id="username"></h5>
+			
+			<a href="wordMangementWFL.html">整理单词</a>
+			<a href="input.html">录入单词</a>
+			<a href="">使用帮助</a>
+		</header>
+		
+		
+			<div class="data" >
+				<div class="section">
+					<h5>本周进度 <button onclick="showSetPlan()">设置背诵计划</button></h5>
+					<ul id="planUL">	
+						
+					</ul>
+				</div>
+				
+
+		</div><!-- action -->
+		<div class="action">
+					<a href="memoryCard.html">开始背诵</a>
+					<a href="input.html">录入单词</a>
+				</div>
+		<img src="images/woman.gif" class="woman1">
+		<img src="images/woman2.gif" class="woman2">
+		<img src="images/man.gif" class="man1">
+		<img src="images/man2.gif" class="man2">	
+	</div><!-- main -->
+		<div class="rail"><div class="train"></div></div>
+			
 </body>
 </html>

@@ -1,151 +1,175 @@
-@import 'public.scss';
-.main{
-	margin:0 auto;
-	max-width: 900px;
+@import '_theme.scss';
+
+
+
+
+
+.action{
+	a{
+
+			display: inline-block;
+			height: 40px;
+			width: 150px;
+			border-radius: 20px;
+			border: $mainColor 1px solid;
+			color:$mainColor;
+			line-height: 40px;
+			vertical-align: top;
+			text-decoration: none;
+			text-align: center;
+			background: $backgroundColor;
+			&:hover{
+				box-shadow: $shadow;
+				transition: all 0.5s;
+			}
+			&:first-child{
+				margin-right: 20px;
+				color:#fff;
+				background: $mainColor;
+					
+			border: $mainColor 1px solid;
+			
+			}
+			
+		}
+
 }
+.data{
+	max-width: 500px;
+	margin:20px 0 40px 0;
+	padding:20px 20px;
+	background: #fff;
+		.section{
+			h5{
+				margin:20px 0 10px 0; 
+				color:#ccc;
+				font-weight:normal;
+				button{
+					border:none;
+					background: none;
+					color:$mainColor;
+					float: right;
+				}
 
-.logo{
-	width: 100px;
-	margin:60px auto;
+			}
+			ul{
+				margin:20px 0;
+				padding: 0;
+			}
+			li{
+				list-style-type: none;
+				display: inline-block;
+				padding:0 15px;
+				img{
+				width: 40px;
+				}
+				p{
+					width: 34px;
+					height: 34px;
 
-	img{
-		width: 100%;
-	}
-	p{
-		width: 100%;
-		text-align: center;
-	}
+					background: $backgroundColor;
+					color:#ccc;
+					line-height: 34px;
+					text-align: center;
+					border-radius: 17px;
+				}
+				h6{
+					margin:5px 0;
+					width: 100%;
+					text-align: center;
+					color:#ccc;
+				}
+			}
+			
+			
+		}
+	
 }
+.setPlan{
+	display: none;
+	z-index: 10;
+	position: fixed;
+	width: 470px;
+	height: 300px;
+	box-sizing: border-box;
+	padding: 20px;
 
-.searchBar{
-		margin: 0 auto;
+	top:200px;
+	left:50%;
+	margin-left: -225px;
+	background: #fff;
+	box-shadow:$shadow;
+	span{
+		display: inline-block;
+		margin-right: 20px;
+		&:nth-child(2){
+			margin-right: 0;
+		}
+	}
+	h5{
+		width: 200px;
+		margin:10px 0;
+		color:#ccc;
+		em{
+			padding:0 5px;
+			font-style:none;
+			font-weight: bold;
+			color:$mainColor;
+		}
+	}
+	button{
+		float: right;
+		border:none;
+
+		width: 157px;
+		height: 40px;
+		border-radius: 20px;
+		margin: 40px 0 0 20px;
+		text-align: center; 
+		background: $mainColor ;
+		color:#fff;
+		&:last-child{
+			
+
+			background:$backgroundColor;
+			color:#ccc;
+		}
+	}
+	.pages{
 		position: relative;
-		max-width: 900px;
+		width:200px;
+		margin:20px 0;		
+		color:#ccc;
 		input{
 			height: 40px;
-			padding:0 60px 0 20px;
-			width: 100%;
+			padding:0 60px 0 60px;
+			width: 200px;
 			box-sizing: border-box;
-			border:none;
-			&:focus,&:hover,&:focus + button,&:hover +button,{
-				box-shadow: $shadow;
-			}
+			border:$borderThin;
+			text-align: center;
 
 		}
-		.search{
-			border:none;
+		button{
+
+			border:$borderThin;
+			background: #fff;
 			padding:0;
 			position: absolute;
 			top:0;
-			right: 0;
 			bottom:0;
-			background: $mainColor;
 			width: 40px;
-			img{
-				width: 20px;
+			margin:0;
+			border-radius: 0;
+			&:first-child{
+				left: 0
 			}
-			&:hover ~ input{
-				box-shadow: $shadow;
+			&:last-child{
+				right: 0;
 			}
-		}
-
-}
-
-.process{
-	max-width: 900px;
-	margin:100px auto;
-	ul{
-		padding:0;
-		margin:20px 0 0 0;
-		width: 100%;
-		li{
-			width: 24.5%;
-			display: inline-block;
-
-			text-decoration: none;
-			img{
-				display: block;
-				width: 80px;
-				margin:0 auto;
+			&:hover{
+				background-color: $mainColor;
+				color:#fff;
 			}
-		}
-	}
-	.bar{
-		width: 100%;
-		height: 10px;
-	
-		border:1px solid #ccc;
-		border-radius: 5px;
-		.current{	
-			position:relative;
-			height: 10px;
-			width: 62.5%;
-			background-image:url("../images/icon/road.png");
-			background-size: 20px;
-			border-radius: 5px;
-			img{
-				position:absolute;
-				right:20px;
-				bottom:20px;
-				
-				height: 120px;
-			}
-		}
-
-	}
-
-}
-
-.action{
-	margin:40px 0;
-	.section1,.section2{
-		box-sizing: border-box;
-		padding:20px 0;
-	}
-	.section1{
-		display: inline-block;
-		width: 49.5%;
-		h1{
-			font-size: 60px;
-			color:$mainColor;
-		}
-		a,button{
-			border:none;
-			background-color: $mainColor;
-			color:#fff;
-		}
-	}
-	a,button{
-		margin:20px 0;
-		display: block;
-		width: 150px;
-		padding:10px;
-		
-		
-		text-decoration:none;
-		border-radius: 20px;
-		text-align: center;
-		font-size: 16px;
-	}
-	.section2{
-		display: inline-block;
-		width: 24.5%;
-		a,button{
-			margin:20px auto;
-			border:1px solid #ccc;
-			background-color: none;
-			color:#ccc;
-
-		}
-		img{
-			display: block;
-			margin:20px auto;
-			width: 120px;
-		}
-		&:hover{
-			background: #fff;
-
-			box-shadow: $shadow;
 		}
 	}
 }

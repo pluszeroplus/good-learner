@@ -1,0 +1,139 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title>整理单词</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="CSS/wordManagement.css">
+		<link rel="stylesheet" type="text/css" href="CSS/public.css">
+		<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="javascript/public.js"></script>
+	<script type="text/javascript" src="javascript/wordManagement.js"></script>
+
+	</head>
+	<body>
+		<div class="messageBox" id="messageBox">
+			<div class="message" >
+				<img id="messageBoxImg" src="images/icon/maidHi.png" alt="">
+				<div>
+					<p id="messageBoxP">欢迎</p>
+					<button id="messageBoxCancel">撤销</button>
+					<button id="messageBoxSubmit">确定</button>
+				</div>
+			</div><!-- message -->
+	</div>
+	<!----------------------- messageBox ------------------------------------------------>
+	
+		<div class="confirmBox">
+		
+			<div class="confirm">
+				<img src="images/icon/maidWarning.png">
+				<p>你确定要离开？</p>
+				<button>取消</button>
+				<button>确定</button>
+			</div>
+		</div>
+	
+	<!-- ----------------------------------confirmBox ----------------------------->
+		<div class="mainWM">
+			<header >
+				<a href="index.html"><img src="images/icon/home.png"></a>
+				<button id="tabPreword" class="selected"  onclick="table.changeTableName('preword')">待整理</button>
+				<button  id="tabWord" onclick="table.changeTableName('word')" >已整理</button>
+				<button  id="tabPlan" onclick="table.changeTableName('plan')" >背诵计划</button>
+			</header><!-- tabBar -->
+			<!-- -------------------------------工具箱 ----------------------------------------------------------------->
+			<div class="toolBar">
+				<div class="searchBar">
+					<button class="search"><img src="images/icon/search.png" alt=""></button>
+					<input type="text" name="">
+				</div>
+				
+				<div class="action">
+					<button onclick="selectAll(this)">全选</button>
+					<button onclick="deleteWords()">删除</button>
+					<button id="changePlanAll"class="highline" onclick="changePlanAll(this)">加入背诵计划</button>				
+				</div>
+			</div><!-- toolBar -->
+	
+		
+	<div class="backDrop">
+		<div class="left">
+<!-- ----------------------------------------------表格---------------------------------------------------->
+			<table class="waitForLogging" id="table">
+				<tr>
+					<th></th>
+					<th>单词</th>
+					<th>推荐原因</th>
+					<th>推荐指数 <button class="rank"><img src="images/icon/rank.png"></button></th>
+					<th>时间 <button class="rank"><img src="images/icon/rank.png"></button> </th>
+				</tr><!-- 标题栏 -->
+			</table>
+		</div><!-- left -->
+		<!-- --------------------------------右边栏-------------------------------------- -->
+		<div class="right">
+		<div class="inputBox">
+			<div id="Editing">
+				<h5>单词</h5>
+				<input id="CwordId" >
+				<input id="Cword" value="" onchange="inputBox.getPhoneticSymbol()">
+
+				<h5>英式音标&美式音标</h5>
+				<div class="phoneticSymbol">
+					<input id="phoneticSymbolID" >
+					<input id="Esymbol" value="">
+					<input  id="Asymbol" value="">
+				</div><!-- phoneticSymbol -->
+
+				<h5>词性&翻译</h5>
+				<div class="line">
+					<input id="property" type="" name="" class="select"  readonly="readonly" onfocus="showOptions(this)" onblur="hideOptions(this)" value="none">
+					<ul>
+						<li>none</li>
+						<li>n.</li>
+						<li>v.</li>
+						<li>pron.</li>
+						<li>adj.</li>
+						<li>adv.</li>
+						<li>num.</li>
+						<li>art.</li>
+						<li>prep.</li>
+						<li>conj.</li>
+						<li>interj.</li>
+					</ul>
+					
+				<input id="Ctranslation" value="" placeholder="请输入释义">
+				</div><!-- line -->
+
+				<h5>例句</h5>
+				<div id="exampleSentence">
+					<textarea  rows="3" cols="34" style="resize:none" placeholder="请输入例句"></textarea>
+				</div>
+				
+				<h5>选择题型</h5>
+				<div>
+					<input type="checkbox" class="level" id="contextFirst" checked="chenked">
+					<label for="contextFirst">猜词</label>
+					<input type="checkbox" class="level" id="clozeTran">
+					<label for="clozeTran">完型/翻译</label>
+					<input type="checkbox" class="level" id="listenning">
+					<label for="listenning">听写</label>
+					<input type="checkbox" class="level" id="makeSentance">
+					<label for="makeSentance">造句</label>
+				</div>
+					<h5 onclick="inputBox.addNewExampleSentence()">+ 添加一个例句</h5>
+					
+				<button  onclick="inputBox.submit()" class="submit">确定</button>
+				<button class="cancle">取消</button>
+			</div>
+		</div><!-- inputBox -->
+	</div><!-- right -->
+	</div><!-- backDrop -->
+	<div class="pages">
+		<button onclick="changePages(this,-1, changeTablePage)">-</button>
+		<input id="tablePages" type="text" name="" value="1" onchange="changePages(this,0, changeTablePage)">
+		<button onclick="changePages(this,1, changeTablePage)">+</button>
+	</div>
+</div><!-- main -->
+
+	</body>
+	</html>

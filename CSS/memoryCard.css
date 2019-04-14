@@ -4,7 +4,7 @@ body {
 body {
   background: #f5f5f5; }
 
-.main {
+.mainMC {
   margin: 0 auto;
   width: 400px; }
 
@@ -17,6 +17,7 @@ body {
     margin: 0 auto; }
 
 .processBar {
+  position: relative;
   margin-top: 20px;
   width: 100%;
   background: #ddd;
@@ -57,30 +58,28 @@ body {
     background: #6ab3cb;
     border-radius: 5px;
     box-shadow: 5px 5px 40px #ddd; }
-  .card .submitButton {
-    display: none; }
   .card .rightButton, .card .submitButton {
     right: 0; }
   .card .leftButton {
     left: 0; }
 
-.contextFirst, .listening, .clozeTest, .translation, .makeSentence {
+.contextFirst, .listening, .clozeTest, .translation, .makeSentence, .congratulation {
   width: 100%;
   min-height: 260px; }
-  .contextFirst .question, .listening .question, .clozeTest .question, .translation .question, .makeSentence .question {
+  .contextFirst .question, .listening .question, .clozeTest .question, .translation .question, .makeSentence .question, .congratulation .question {
     min-height: 160px;
     padding-bottom: 20px; }
-  .contextFirst p, .listening p, .clozeTest p, .translation p, .makeSentence p {
+  .contextFirst p, .listening p, .clozeTest p, .translation p, .makeSentence p, .congratulation p {
     color: #999; }
-  .contextFirst em, .listening em, .clozeTest em, .translation em, .makeSentence em {
+  .contextFirst em, .listening em, .clozeTest em, .translation em, .makeSentence em, .congratulation em {
     padding: 0 5px;
     font-weight: bold;
     color: #6ab3cb; }
-  .contextFirst i, .listening i, .clozeTest i, .translation i, .makeSentence i {
+  .contextFirst i, .listening i, .clozeTest i, .translation i, .makeSentence i, .congratulation i {
     padding: 0px 10px;
     color: #ccc;
     font-size: 0.8em; }
-  .contextFirst .answer, .contextFirst input, .contextFirst textarea, .listening .answer, .listening input, .listening textarea, .clozeTest .answer, .clozeTest input, .clozeTest textarea, .translation .answer, .translation input, .translation textarea, .makeSentence .answer, .makeSentence input, .makeSentence textarea {
+  .contextFirst .answer, .contextFirst input, .contextFirst textarea, .listening .answer, .listening input, .listening textarea, .clozeTest .answer, .clozeTest input, .clozeTest textarea, .translation .answer, .translation input, .translation textarea, .makeSentence .answer, .makeSentence input, .makeSentence textarea, .congratulation .answer, .congratulation input, .congratulation textarea {
     bottom: 0;
     width: 100%;
     min-height: 80px;
@@ -89,18 +88,20 @@ body {
     background: #f5f5f5;
     font-size: 1.5em;
     border-radius: 5px; }
-  .contextFirst .answer, .listening .answer, .clozeTest .answer, .translation .answer, .makeSentence .answer {
+  .contextFirst .answer, .listening .answer, .clozeTest .answer, .translation .answer, .makeSentence .answer, .congratulation .answer {
     background-image: url("../images/icon/answer.png");
     background-size: 40px; }
-    .contextFirst .answer p, .listening .answer p, .clozeTest .answer p, .translation .answer p, .makeSentence .answer p {
+    .contextFirst .answer p, .listening .answer p, .clozeTest .answer p, .translation .answer p, .makeSentence .answer p, .congratulation .answer p {
       padding: 0;
+      margin: 0;
       display: none; }
-  .contextFirst input, .contextFirst textarea, .listening input, .listening textarea, .clozeTest input, .clozeTest textarea, .translation input, .translation textarea, .makeSentence input, .makeSentence textarea {
+  .contextFirst input, .contextFirst textarea, .listening input, .listening textarea, .clozeTest input, .clozeTest textarea, .translation input, .translation textarea, .makeSentence input, .makeSentence textarea, .congratulation input, .congratulation textarea {
     border: 1px solid #f5f5f5; }
-    .contextFirst input:focus, .contextFirst textarea:focus, .listening input:focus, .listening textarea:focus, .clozeTest input:focus, .clozeTest textarea:focus, .translation input:focus, .translation textarea:focus, .makeSentence input:focus, .makeSentence textarea:focus {
+    .contextFirst input:focus, .contextFirst textarea:focus, .listening input:focus, .listening textarea:focus, .clozeTest input:focus, .clozeTest textarea:focus, .translation input:focus, .translation textarea:focus, .makeSentence input:focus, .makeSentence textarea:focus, .congratulation input:focus, .congratulation textarea:focus {
       background: none;
-      border: 1px dotted #ccc; }
-  .contextFirst del, .listening del, .clozeTest del, .translation del, .makeSentence del {
+      border: 1px dotted #ccc;
+      transition: all 0.5s; }
+  .contextFirst del, .listening del, .clozeTest del, .translation del, .makeSentence del, .congratulation del {
     margin: 0 5px -4px 5px;
     padding: 5px;
     display: inline-block;
@@ -108,7 +109,7 @@ body {
     height: 1em;
     border-radius: 5px;
     background: #f5f5f5; }
-  .contextFirst .tips, .listening .tips, .clozeTest .tips, .translation .tips, .makeSentence .tips {
+  .contextFirst .tips, .listening .tips, .clozeTest .tips, .translation .tips, .makeSentence .tips, .congratulation .tips {
     width: 100%;
     min-height: 80px;
     box-sizing: border-box;
@@ -116,15 +117,15 @@ body {
     border-radius: 5px;
     background-image: url("../images/icon/tips.png");
     background-size: 30px; }
-    .contextFirst .tips p, .listening .tips p, .clozeTest .tips p, .translation .tips p, .makeSentence .tips p {
+    .contextFirst .tips p, .listening .tips p, .clozeTest .tips p, .translation .tips p, .makeSentence .tips p, .congratulation .tips p {
       margin: 0;
       display: none;
       line-height: 150%;
       font-size: 0.8em; }
-  .contextFirst .show, .listening .show, .clozeTest .show, .translation .show, .makeSentence .show {
+  .contextFirst .show, .listening .show, .clozeTest .show, .translation .show, .makeSentence .show, .congratulation .show {
     background: #fff;
     border: 1px dotted #ccc; }
-    .contextFirst .show p, .listening .show p, .clozeTest .show p, .translation .show p, .makeSentence .show p {
+    .contextFirst .show p, .listening .show p, .clozeTest .show p, .translation .show p, .makeSentence .show p, .congratulation .show p {
       display: block; }
 
 .contextFirst p, .clozeTest p {
@@ -133,6 +134,17 @@ body {
   margin: 0;
   font-size: 1em;
   color: #999; }
+
+.congratulation img {
+  display: block;
+  width: 100px;
+  margin: 0 auto 20px auto; }
+.congratulation h1 {
+  margin: 0;
+  padding: 20px;
+  font-size: 1.5em;
+  font-weight: bolder;
+  text-align: center; }
 
 .listening img {
   display: block;
@@ -150,6 +162,8 @@ body {
   margin: 5px;
   list-style: none;
   display: inline-block; }
+.clozeTest p {
+  margin-top: 10px; }
 
 .translation h1 {
   margin: 0;

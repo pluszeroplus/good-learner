@@ -1,0 +1,24 @@
+<div class="messageBox" id="messageBox">
+			<div class="message" >
+				<img id="messageBoxImg" src="images/icon/maidHi.png" alt="">
+				<div>
+					<p id="messageBoxP">欢迎</p>
+					<button id="messageBoxCancel">撤销</button>
+					<button id="messageBoxSubmit">确定</button>
+				</div>
+			</div><!-- message -->
+	</div>
+	<!----------------------- messageBox ------------------------------------------------>
+	
+		<div class="confirmBox" id="confirmBox">
+		
+			<div class="confirm">
+				<img id="comfirmBoxImg" src="images/icon/maidWarning.png">
+				<p id="confirmBoxP">你确定要离开？</p>
+				<button id="comfirmBoxCancel">取消</button>
+				<button id="comfirmBoxSubmit">确定</button>
+			</div>
+		</div>
+	
+	<!-- ----------------------------------confirmBox ----------------------------->
+	<div class="background" id="background"></div>

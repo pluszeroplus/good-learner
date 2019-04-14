@@ -5,7 +5,7 @@ button {
   background: none;
   border: none; }
 
-.main {
+.mainWM {
   position: relative;
   max-width: 1280px;
   margin: 0 auto; }
@@ -31,20 +31,6 @@ button {
 .inputBox .cancle {
   display: none; }
 
-.tabBar img {
-  float: left;
-  padding: 20px;
-  width: 30px; }
-.tabBar h1 {
-  display: inline-block;
-  padding: 10px 20px;
-  border-bottom: 2px;
-  color: #ccc;
-  font-size: 1em; }
-.tabBar .selected {
-  color: #6ab3cb;
-  border-bottom: solid #6ab3cb; }
-
 select {
   background: #fff;
   padding: 5px;
@@ -66,7 +52,8 @@ select {
       box-sizing: border-box;
       border: none; }
       .toolBar .searchBar input:focus, .toolBar .searchBar input:hover, .toolBar .searchBar input:focus + button, .toolBar .searchBar input:hover + button {
-        box-shadow: 5px 5px 40px #ddd; }
+        box-shadow: 5px 5px 40px #ddd;
+        transition: all 0.5s; }
     .toolBar .searchBar .search {
       padding: 0;
       position: absolute;
@@ -76,7 +63,8 @@ select {
       background: #6ab3cb;
       width: 40px; }
       .toolBar .searchBar .search:hover ~ input {
-        box-shadow: 5px 5px 40px #ddd; }
+        box-shadow: 5px 5px 40px #ddd;
+        transition: all 0.5s; }
   .toolBar img {
     width: 20px; }
   .toolBar .action {
@@ -91,6 +79,9 @@ select {
       border: 1px solid #eee;
       background: #fff;
       color: #ccc; }
+      .toolBar .action button:hover {
+        box-shadow: 5px 5px 40px #ddd;
+        transition: all 0.5s; }
     .toolBar .action .highline {
       background-color: #6ab3cb;
       border: #6ab3cb;
@@ -102,6 +93,11 @@ table {
   width: 100%;
   text-align: left;
   color: #ccc; }
+  table .rank {
+    padding: 0;
+    background: none; }
+    table .rank img {
+      height: 10px; }
   table .tableCheckBox {
     display: none; }
     table .tableCheckBox:checked ~ div {
@@ -136,10 +132,12 @@ table {
     table tr:first-child {
       border-bottom: 1px solid #eee; }
       table tr:first-child:hover {
-        background-color: #fff; }
+        background-color: #fff;
+        transition: all 0.5s; }
     table tr:hover {
       margin-right: -20px;
-      background: #f5f5f5; }
+      background: #f5f5f5;
+      transition: all 0.5s; }
   table th {
     font-weight: normal;
     font-size: 0.8em;
@@ -150,6 +148,10 @@ table {
     border-radius: 2px; }
   table img {
     height: 1em; }
+  table .exampleSentence, table .property {
+    display: none; }
+  table td {
+    display: inline-block; }
 
 .icon {
   width: 16px; }
@@ -163,22 +165,27 @@ table {
   color: #6ab3cb;
   font-weight: bold;
   overflow: hidden;
-  width: 200px; }
+  box-sizing: border-box;
+  width: 180px; }
 .waitForLogging th:nth-child(3), .waitForLogging td:nth-child(3), .loggedData th:nth-child(3), .loggedData td:nth-child(3), .plan th:nth-child(3), .plan td:nth-child(3) {
   overflow: hidden;
-  width: 200px; }
+  width: 180px; }
 
 .plan td:nth-child(4), .plan td:nth-child(5), .plan td:nth-child(6), .plan td:nth-child(7), .plan th:nth-child(4), .plan th:nth-child(5), .plan th:nth-child(6), .plan th:nth-child(7), .loggedData td:nth-child(4), .loggedData td:nth-child(5), .loggedData td:nth-child(6), .loggedData td:nth-child(7), .loggedData th:nth-child(4), .loggedData th:nth-child(5), .loggedData th:nth-child(6), .loggedData th:nth-child(7) {
   width: 50px; }
 .plan td:nth-child(8), .plan td:nth-child(9), .plan th:nth-child(8), .plan th:nth-child(9), .loggedData td:nth-child(8), .loggedData td:nth-child(9), .loggedData th:nth-child(8), .loggedData th:nth-child(9) {
   color: #ccc;
   text-align: right;
+  width: 100px; }
+.plan td:nth-child(9), .plan th:nth-child(9), .loggedData td:nth-child(9), .loggedData th:nth-child(9) {
   width: 80px; }
 
-.loggedData td:last-child {
+.loggedData td:last-child, .plan td:last-child {
   text-align: center; }
-.loggedData td:nth-child(8) {
-  width: 60px; }
+.loggedData td:nth-child(10), .plan td:nth-child(10) {
+  padding: 0 0px 0 50px;
+  width: 20px;
+  height: 20px; }
 
 .waitForLogging td:nth-child(3), .waitForLogging td:nth-child(3), .waitForLogging th:nth-child(3), .waitForLogging th:nth-child(3) {
   width: 300px; }
