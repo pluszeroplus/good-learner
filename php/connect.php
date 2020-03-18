@@ -2,8 +2,8 @@
 	header("Content-type: text/html; charset=utf-8");
 
 	$servername="localhost";
-	$username="learner";
-	$password="R0VE4A3FcDS4Uj5W";
+	$username="##";
+	$password="##";
 	
 	$conn=mysqli_connect($servername,$username,$password,"goodlearner");
 	// $conn=mysqli_connect($servername,$username,$password,"englishstudy");
